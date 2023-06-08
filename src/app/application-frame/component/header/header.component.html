@@ -1,11 +1,17 @@
 <div class="header">
   <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
   <mat-menu #animals="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="sorting">Sorting</button>
-    <button mat-menu-item [matMenuTriggerFor]="finding">Finding</button>
+    <button mat-menu-item [matMenuTriggerFor]="sortingAlgorithms">
+      {{ "header.sorting" | translate }}}
+    </button>
+    <mat-menu #sortingAlgorithms>
+      <button
+        *ngFor="let algo of sortingAlgorithm | keyvalue"
+        mat-menu-item
+        (click)="changeSelectedAlgo(algo.value)"
+      >
+        {{ "sortingAlgorithm." + algo.key | translate }}
+      </button>
+    </mat-menu>
   </mat-menu>
-  <mat-menu #sorting>
-    <button mat-menu-item>Binary Search</button>
-  </mat-menu>
-  <mat-menu #finding></mat-menu>
 </div>
