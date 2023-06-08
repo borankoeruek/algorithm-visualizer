@@ -1,0 +1,7 @@
+{
+  "sortingAlgorithm": {
+    "BUBBLE_SORT": "Bubble Sort",
+    "BINARY_SEARCH": "Binary Search"
+  },
+  "header": { "sorting": "Sortierung" }
+}
