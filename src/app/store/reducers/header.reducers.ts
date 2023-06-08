@@ -1,15 +1,15 @@
 import { createReducer, on } from '@ngrx/store';
-import { AlgoSelection } from 'src/app/shared/frontend-model/algo-selection.enum';
+import { SortingAlgorithm } from 'src/app/shared/frontend-model/sorting-algorithm.enum';
 import { HeaderActions } from '../actions/header.actions';
 
 export const headerFeatureKey = 'mainState';
 
 export interface HeaderState {
-  algorithm: AlgoSelection;
+  algorithm: SortingAlgorithm;
 }
 
 export const initialState: HeaderState = {
-  algorithm: AlgoSelection.BINARY_SEARCH,
+  algorithm: SortingAlgorithm.BINARY_SEARCH,
 };
 
 export const reducer = createReducer(
