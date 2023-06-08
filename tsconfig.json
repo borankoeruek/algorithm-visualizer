@@ -22,7 +22,16 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "incremental": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictFunctionTypes": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
