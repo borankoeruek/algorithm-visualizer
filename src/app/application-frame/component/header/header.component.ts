@@ -11,8 +11,9 @@ import { selectedAlgorithm } from 'src/app/store/selectors/header.selectors';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor(private readonly store: Store<AppState>) {}
   public sortingAlgorithm: typeof SortingAlgorithm = SortingAlgorithm;
+
+  constructor(private readonly store: Store<AppState>) {}
 
   public ngOnInit(): void {
     this.store.pipe(select(selectedAlgorithm)).subscribe((state) => {
